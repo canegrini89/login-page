@@ -3,6 +3,7 @@ import LoginPage from "./Pages/LoginPage/index";
 import ProtectedLayout from "./Layouts/ProtectedLayout";
 import DashboarPage from "./Pages/DashboarPage";
 import ProfilePage from "./Pages/ProfilePage";
+import NotFoundPage from "./Pages/NotFoundPage";
 
 type Route = {
   path: string;
@@ -33,5 +34,10 @@ export const routes: Route[] = [
         component: <ProfilePage />,
       },
     ],
+  },
+  {
+    path: "*",
+    label: "Not Found",
+    component: <NotFoundPage />,
   },
 ];
